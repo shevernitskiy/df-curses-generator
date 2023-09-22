@@ -1,12 +1,12 @@
 from pathlib import Path
 
-from df_font_generator.font_generator import CP1251_CHARMAP, FontGenerator
+from df_font_generator.font_generator import CP1251_RU_CHARMAP, FontGenerator
 
 fg = FontGenerator()
 fg.set_padding(0, -1)
 fg.set_font(Path("./fonts/ubuntu_mono.ttf"), 14)
 
-for line in CP1251_CHARMAP:
+for line in CP1251_RU_CHARMAP:
     fg.draw_sequence(line)
 
 fg.set_padding(0, 0)
